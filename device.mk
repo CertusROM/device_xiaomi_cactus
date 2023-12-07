@@ -16,3 +16,14 @@
 
 DEVICE_PATH := device/xiaomi/cactus
 
+# Rootdir
+PRODUCT_PACKAGES += \
+    init.aee.rc \
+    init.ago.rc \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6765.rc \
+    init.mt6765.usb.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    ueventd.mtk.rc

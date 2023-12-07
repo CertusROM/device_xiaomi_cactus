@@ -73,6 +73,18 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-impl.recovery \
     android.hardware.health@2.0-service
+
+
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhidltransport.vendor \
+    libhwbinder \
+    libhwbinder.vendor \
+    android.hidl.base@1.0 \
+    android.hidl.manager@1.0 \
+    android.hidl.memory.block@1.0
+
 # Media
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)

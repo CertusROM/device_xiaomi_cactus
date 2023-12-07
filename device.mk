@@ -27,3 +27,6 @@ PRODUCT_PACKAGES += \
     init.project.rc \
     init.sensor_1_0.rc \
     ueventd.mtk.rc
+
+# Shipping API Level
+PRODUCT_SHIPPING_API_LEVEL := 29

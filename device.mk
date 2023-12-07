@@ -51,7 +51,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.1-service \
@@ -62,6 +61,12 @@ PRODUCT_PACKAGES += \
     libhwc2on1adapter \
     libhwc2onfbadapter \
     libvulkan
+
+# DRM
+PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
+    android.hardware.drm@1.0-service-lazy \
+    android.hardware.drm@1.4-service.clearkey
 
 # Media
 PRODUCT_COPY_FILES += \

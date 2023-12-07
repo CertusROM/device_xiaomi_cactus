@@ -63,6 +63,26 @@ PRODUCT_PACKAGES += \
     libhwc2onfbadapter \
     libvulkan
 
+# Media
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media/,$(TARGET_COPY_OUT_VENDOR)/etc)
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
+
+PRODUCT_PACKAGES += \
+    libminijail \
+    libavservices_minijail \
+    libavservices_minijail.vendor \
+    com.android.media.swcodec \
+    libsfplugin_ccodec
+
+PRODUCT_PACKAGES += \
+    android.hardware.cas@1.0-service \
+    android.hardware.media.omx@1.0-service
+
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
